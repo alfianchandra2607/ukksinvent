@@ -15,6 +15,8 @@ Route::resource('barangkeluar',\App\Http\Controllers\BarangkeluarController::cla
 Route::resource('/products', \App\Http\Controllers\ProductController::class)->middleware('auth');
 Route::resource('/kategori', \App\Http\Controllers\KategoriController::class)->middleware('auth');
 Route::resource('category', \App\Http\Controllers\CategoryController::class);
+Route::resource('siswa', \App\Http\Controllers\SiswaController::class)->middleware('auth');
+
 
 
 // Routes untuk authentikasi
