@@ -110,7 +110,7 @@ class KategoriController extends Controller
     }
 
 
-    
+    // function untuk update api
     function updateAPIKategori(Request $request, $kategori_id){
         $kategori = Kategori::find($kategori_id);
 
@@ -125,11 +125,13 @@ class KategoriController extends Controller
         return response()->json(["status"=>"kategori berhasil diubah"]);
     }
 
+    // function untuk membuat index api
     function showAPIKategori(Request $request){
         $kategori = Kategori::all();
         return response()->json($kategori);
     }
 
+    // function untuk create api
     function createAPIKategori(Request $request){
         $request->validate([
             'kategori' => 'required|string|max:100',
@@ -145,6 +147,7 @@ class KategoriController extends Controller
         return response()->json(["status"=>"data berhasil dibuat"]);
     }
 
+    // function untuk delete api
     function deleteAPIKategori($kategori_id){
 
         $del_kategori = Kategori::findOrFail($kategori_id);
