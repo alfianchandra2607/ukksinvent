@@ -7,6 +7,7 @@
                 
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
                     <h1 class="h3 mb-0 text-gray-800">Data Barang</h1>
+                    <!-- search -->
                     <form action="{{ route('barang.index') }}" method="GET" class="form-inline mb-3">
                             <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search" aria-label="Search" value="{{ request()->query('search') }}">
                             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>

@@ -12,8 +12,17 @@ class KategoriController extends Controller
     public function index(Request $request)
     {
 
-        $kategori = Kategori::all();
+        $kategori = Kategori::getKategoriAll();
         
+        $search = $request->query('search');
+        if ($search) {
+            $kategori = Kategori::where('kategori', 'like', "%{$search}%")
+            ->orWhere('jenis', 'like', "%{$search}%")
+            ->get();
+        
+        } else {
+            $kategori = Kategori::getKategoriAll();
+        }
         
         return view('kategori.index', compact('kategori'));
     }

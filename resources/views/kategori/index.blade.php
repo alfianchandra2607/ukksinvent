@@ -6,6 +6,7 @@
             <div class="col-md-12">
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
                     <h1 class="h3 mb-0 text-gray-800">Kategori</h1>
+                    <!-- search -->
                     <form action="{{ route('kategori.index') }}" method="GET" class="form-inline mb-3">
                             <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search" aria-label="Search" value="{{ request()->query('search') }}">
                             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -34,6 +35,8 @@
                             <th>ID</th>
                             <th>KATEGORI</th>
                             <th>JENIS</th>
+                            <th>KETERANGAN</th>
+
                         </tr>
                     </thead>
                     <tbody>
@@ -42,6 +45,7 @@
                                 <td>{{ $rowkat->id }}</td>
                                 <td>{{ $rowkat->kategori }}</td>
                                 <td>{{ $rowkat->jenis }}</td>
+                                <td>{{ $rowkat->ketkategori }}</td>
 
                                 <td class="text-center"> 
                                     <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('kategori.destroy', $rowkat->id) }}" method="POST">

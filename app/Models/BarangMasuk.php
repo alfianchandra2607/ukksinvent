@@ -11,7 +11,7 @@ class BarangMasuk extends Model
     protected $table="barangmasuk";
     protected $fillable = ['tgl_masuk', 'qty_masuk', 'barang_id'];
 
-    // Relasi ke model Kategori
+    // Relasi ke model barang
     public function Barang()
     {
         return $this->belongsTo(Barang::class, 'barang_id');

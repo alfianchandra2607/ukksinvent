@@ -16,8 +16,11 @@ class Barang extends Model
     {
         return $this->belongsTo(Kategori::class, 'kategori_id');
     }
+
+    //untuk pembuatan tanggal
     public function barangmasuk()
     {
         return $this->hasMany(BarangMasuk::class);
     }
+    
 }
