@@ -15,6 +15,7 @@ class Kategori extends Model
        'jenis',
     ];
     
+    //untuk menggunakan store function
     public static function getKategoriAll()
     {
         return DB::table('kategori')
