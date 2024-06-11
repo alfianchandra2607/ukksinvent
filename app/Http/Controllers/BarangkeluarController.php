@@ -12,7 +12,6 @@ class BarangkeluarController extends Controller
     {
         $barangkeluar = BarangKeluar::all();
 
-
         return view('barangkeluar.index', compact('barangkeluar'));
     }
 

@@ -11,6 +11,9 @@ class BarangmasukController extends Controller
     {
         $barangmasuk = BarangMasuk::all();
 
+         // Ambil parameter pencarian dari request
+
+
         return view('barangmasuk.index', compact('barangmasuk'));
     }
 

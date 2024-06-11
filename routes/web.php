@@ -16,6 +16,7 @@ Route::resource('/products', \App\Http\Controllers\ProductController::class)->mi
 Route::resource('/kategori', \App\Http\Controllers\KategoriController::class)->middleware('auth');
 Route::resource('category', \App\Http\Controllers\CategoryController::class);
 Route::resource('siswa', \App\Http\Controllers\SiswaController::class)->middleware('auth');
+Route::resource('dashboard', \App\Http\Controllers\DashboardController::class)->middleware('auth');
 
 
 
